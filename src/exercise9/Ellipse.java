@@ -19,8 +19,8 @@ public class Ellipse {
 
     public Ellipse(Ellipse otherEllipse) {
         startPoint = new Point(otherEllipse.startPoint);
-        a = otherRectangle.a;
-        b = otherRectangle.b;
+        a = otherEllipse.a;
+        b = otherEllipse.b;
     }
 
     public boolean isValid() {
@@ -55,12 +55,12 @@ public class Ellipse {
     }
 
     public boolean equal(Ellipse otherEllipse) {
-        boolean sameHeight = Utils.equals(a, otherEllipse.a);
-        boolean sameWidth = Utils.equals(b, otherEllipse.b);
-        boolean sameHeightReversed = Utils.equals(a, otherEllipse.b);
-        boolean sameWidthReversed = Utils.equals(b, otherEllipse.a);
+        boolean sameA = Utils.equals(a, otherEllipse.a);
+        boolean sameB = Utils.equals(b, otherEllipse.b);
+        boolean sameAReversed = Utils.equals(a, otherEllipse.b);
+        boolean sameBReversed = Utils.equals(b, otherEllipse.a);
 
-        return (samea && sameb) || (sameaReversed && samebReversed);
+        return (sameA && sameB) || (sameAReversed && sameBReversed);
     }
   
 }
